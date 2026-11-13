@@ -9,7 +9,7 @@ original en el mismo instante (tecla **O**), marquen BIEN / MAL / OTRA COSA con 
 - `app.py` — la web. Páginas: `/` (lista de películas), `/pelicula/<slug>` (reproductor), `/admin` (panel: marcas por corrector, bajar `.md`/`.json`, traer los videos de Drive).
 - `peliculas.json` — las películas: archivos de video, cortes de la limpieza (para conmutar al original en el instante correcto) y los puntos marcados antes de la primera versión de arreglo.
 - `videos/` — los mp4 (no van al repo). `datos/` — las correcciones, un `.jsonl` por película (no van al repo).
-- `render.yaml` — servicio para Render con disco persistente de 20 GB montado en `/var/data` (videos y datos).
+- `render.yaml` — servicio para Render con disco persistente de 30 GB montado en `/var/data` (videos y datos).
 - `render/` — instala rclone en el build y baja los videos de Drive desde el panel.
 - `herramientas/bajar_correcciones.py` — desde la PC: `python herramientas/bajar_correcciones.py https://<servicio>.onrender.com <CLAVE_ADMIN> <carpeta>`.
 
