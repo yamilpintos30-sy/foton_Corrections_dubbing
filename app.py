@@ -33,7 +33,20 @@ VIDEOS.mkdir(parents=True, exist_ok=True)
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 1 << 20
 _lock = threading.Lock()
-_bajada = {"corriendo": False, "log": ""}
+# estado de la bajada de videos en archivos (gunicorn corre varios workers: la memoria no se comparte)
+_BAJADA_LOG = DATOS / "bajada.log"
+_BAJADA_LOCK = DATOS / "bajada.corriendo"
+
+
+def _bajada_estado() -> dict:
+    corriendo = _BAJADA_LOCK.exists() and (time.time() - _BAJADA_LOCK.stat().st_mtime) < 6 * 3600
+    log = _BAJADA_LOG.read_text(encoding="utf-8", errors="replace") if _BAJADA_LOG.exists() else ""
+    return {"corriendo": corriendo, "log": log[-20000:]}
+
+
+def _bajada_escribir(linea: str):
+    with open(_BAJADA_LOG, "a", encoding="utf-8") as f:
+        f.write(linea if linea.endswith("\n") else linea + "\n")
 
 
 def peliculas() -> dict:
@@ -174,7 +187,7 @@ def admin():
                             otra=sum(1 for f in filas if f["veredicto"] == "OTRA"),
                             nuevos=sum(1 for f in filas if f["punto"] is None),
                             videos={k: existe_video(p[k]["archivo"]) for k in ("doblada", "original")}))
-    return render_template("admin.html", resumen=resumen, bajada=_bajada, drive=os.getenv("VIDEOS_DRIVE", ""))
+    return render_template("admin.html", resumen=resumen, bajada=_bajada_estado(), drive=os.getenv("VIDEOS_DRIVE", ""))
 
 
 def fmt_t(s: float) -> str:
@@ -217,25 +230,26 @@ def admin_json(slug):
 
 
 def _bajar_videos():
-    _bajada["corriendo"] = True
-    _bajada["log"] = f"{time.strftime('%H:%M:%S')} bajando videos de Drive a {VIDEOS}…\n"
+    _BAJADA_LOCK.write_text(str(os.getpid()), encoding="utf-8")
+    _BAJADA_LOG.write_text(f"{time.strftime('%H:%M:%S')} bajando videos de Drive a {VIDEOS}…\n", encoding="utf-8")
     try:
         proc = subprocess.Popen(["bash", str(RAIZ / "render" / "bajar_videos.sh")], stdout=subprocess.PIPE,
                                 stderr=subprocess.STDOUT, text=True, env={**os.environ, "VIDEOS_DIR": str(VIDEOS)})
         for linea in proc.stdout:
-            _bajada["log"] = (_bajada["log"] + linea)[-20000:]
+            _bajada_escribir(linea)
+            _BAJADA_LOCK.touch()
         proc.wait()
-        _bajada["log"] += f"{time.strftime('%H:%M:%S')} terminó con código {proc.returncode}\n"
+        _bajada_escribir(f"{time.strftime('%H:%M:%S')} terminó con código {proc.returncode}")
     except Exception as e:  # noqa: BLE001
-        _bajada["log"] += f"ERROR: {e}\n"
-    _bajada["corriendo"] = False
+        _bajada_escribir(f"ERROR: {e}")
+    _BAJADA_LOCK.unlink(missing_ok=True)
 
 
 @app.post("/admin/bajar")
 def admin_bajar():
     if not es_admin():
         abort(403)
-    if not _bajada["corriendo"]:
+    if not _bajada_estado()["corriendo"]:
         threading.Thread(target=_bajar_videos, daemon=True).start()
     return redirect(url_for("admin"))
 
@@ -244,7 +258,7 @@ def admin_bajar():
 def admin_log():
     if not es_admin():
         abort(403)
-    return Response(_bajada["log"], mimetype="text/plain; charset=utf-8")
+    return Response(_bajada_estado()["log"], mimetype="text/plain; charset=utf-8")
 
 
 @app.get("/salud")
