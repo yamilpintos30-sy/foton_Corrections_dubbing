@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel · Revisión de doblajes</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+<div class="simple">
+  <h1>Panel de correcciones</h1>
+  <table>
+    <tr><th>Película</th><th>Videos</th><th>Correctores</th><th>Marcas</th><th>MAL</th><th>OTRA</th><th>Nuevos</th><th>Bajar</th></tr>
+    {% for r in resumen %}
+    <tr>
+      <td>{{ r.titulo }}</td>
+      <td>{% for k, ok in r.videos.items() %}<span class="{{ '' if ok else 'falta' }}">{{ k }}: {{ 'sí' if ok else 'FALTA' }}</span><br>{% endfor %}</td>
+      <td>{{ r.correctores|join(', ') or '—' }}</td>
+      <td>{{ r.n }}</td><td>{{ r.mal }}</td><td>{{ r.otra }}</td><td>{{ r.nuevos }}</td>
+      <td><a href="{{ url_for('admin_md', slug=r.slug) }}">.md</a> · <a href="{{ url_for('admin_json', slug=r.slug) }}">.json</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <h2>Videos</h2>
+  <p>Los mp4 se bajan de Drive con rclone a la carpeta de videos del servidor (origen: <code>{{ drive or 'VIDEOS_DRIVE sin definir' }}</code>).</p>
+  <form method="post" action="{{ url_for('admin_bajar') }}">
+    <button class="big" type="submit" {% if bajada.corriendo %}disabled{% endif %}>{{ 'Bajando…' if bajada.corriendo else 'Bajar los videos de Drive' }}</button>
+    <a href="{{ url_for('admin_log') }}" target="_blank">ver log</a>
+  </form>
+  {% if bajada.log %}<pre>{{ bajada.log[-4000:] }}</pre>{% endif %}
+</div>
+</body>
+</html>

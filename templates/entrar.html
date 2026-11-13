@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ 'Panel' if admin else 'Entrar' }} · Revisión de doblajes</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+<div class="simple">
+  <h1>{{ 'Panel de correcciones' if admin else 'Revisión de doblajes' }}</h1>
+  <form method="post" action="{{ url_for('admin') if admin else url_for('entrar') }}" class="tarjeta">
+    <input type="password" name="clave" placeholder="Clave de acceso" autofocus>
+    <button class="big" type="submit">Entrar</button>
+    {% if error %}<p class="falta">{{ error }}</p>{% endif %}
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: foton-correcciones
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt && bash render/instalar_rclone.sh
+    startCommand: gunicorn -w 2 -k gthread --threads 8 --timeout 120 -b 0.0.0.0:$PORT app:app
+    healthCheckPath: /salud
+    disk:
+      name: videos
+      mountPath: /var/data
+      sizeGB: 20
+    envVars:
+      - key: VIDEOS_DIR
+        value: /var/data/videos
+      - key: DATOS_DIR
+        value: /var/data/datos
+      - key: CLAVE
+        sync: false
+      - key: CLAVE_ADMIN
+        sync: false
+      - key: VIDEOS_DRIVE
+        value: "gd:Morbido correcciones 11-nov/web"
+      - key: RCLONE_CONFIG_GD_TYPE
+        value: drive
+      - key: RCLONE_CONFIG_GD_SCOPE
+        value: drive.readonly
+      - key: RCLONE_CONFIG_GD_TOKEN
+        sync: false

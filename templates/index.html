@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisión de doblajes · Foton</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+<div class="simple">
+  <h1>Revisión de doblajes</h1>
+  <p>Elegí una película. Vas a oír cada punto marcado en la versión doblada y podés conmutar al original en el mismo instante. Marcá BIEN, MAL u OTRA COSA, dejá una nota si hace falta, y podés marcar puntos nuevos en cualquier momento. Todo se guarda solo.</p>
+  {% for p in peliculas %}
+  <div class="tarjeta">
+    <div>
+      <h2>{{ p.titulo }}</h2>
+      <p>{{ p.n_puntos }} puntos marcados · {{ p.nota }}</p>
+      {% if not p.lista %}<p class="falta">Los videos todavía no están cargados en el servidor.</p>{% endif %}
+    </div>
+    <a class="ir" href="{{ url_for('pelicula', slug=p.slug) }}"><button class="big">▶ Revisar</button></a>
+  </div>
+  {% endfor %}
+</div>
+</body>
+</html>
