@@ -446,6 +446,197 @@
           "esp": "en inglés: ¿está bien que quede así?"
         }
       ]
+    },
+    {
+      "slug": "duckling",
+      "titulo": "Don't Torture a Duckling (1972) · doblaje es-MX",
+      "nota": "Primera revisión de Foton del 13-nov. Sin cortes: la doblada va en el mismo tiempo que el original. Los dos personajes con la misma voz y el niño con voz de mujer no se corrigen con rehacer.",
+      "doblada": {
+        "archivo": "duckling_doblada.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "duckling_original.mp4",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "cortes": [],
+      "puntos": [
+        {
+          "sec": "B",
+          "desde": 32,
+          "que": "título de la película «Angustia de silencio» (narrador pendiente)",
+          "esp": "¿se oye el título?",
+          "hasta": 40
+        },
+        {
+          "sec": "A",
+          "desde": 168,
+          "que": "2:48 se va el audio por completo (vuelve a las 3:00)",
+          "esp": "hay audio todo el tiempo",
+          "hasta": 182
+        },
+        {
+          "sec": "B",
+          "desde": 230,
+          "que": "3:50 se encima el audio",
+          "esp": "¿sigue encimado?"
+        },
+        {
+          "sec": "C",
+          "desde": 768,
+          "que": "12:48 los dos tienen la misma voz",
+          "esp": "no se corrige con rehacer: ¿cuánto molesta?"
+        },
+        {
+          "sec": "A",
+          "desde": 1366,
+          "que": "22:52 «Mátenla» ×2 (es un hombre)",
+          "esp": "ahora «Mátenlo»",
+          "hasta": 1372
+        },
+        {
+          "sec": "A",
+          "desde": 1975,
+          "que": "32:55 el niño tiene voz de mujer y hablaba de sí en femenino",
+          "esp": "ahora «estoy solo»; la voz sigue siendo la misma",
+          "hasta": 1985
+        },
+        {
+          "sec": "B",
+          "desde": 3255,
+          "que": "54:15 los ladridos tienen eco",
+          "esp": "¿sigue el eco?"
+        },
+        {
+          "sec": "C",
+          "desde": 3320,
+          "que": "55:20 los niños tienen una voz distinta a la anterior",
+          "esp": "no se corrige con rehacer"
+        },
+        {
+          "sec": "B",
+          "desde": 3501,
+          "que": "58:21 la voz de ella tiene eco",
+          "esp": "¿sigue el eco?"
+        },
+        {
+          "sec": "B",
+          "desde": 4020,
+          "que": "1:07:00 la canción tiene eco",
+          "esp": "¿sigue el eco?",
+          "hasta": 4035
+        },
+        {
+          "sec": "A",
+          "desde": 4212,
+          "que": "1:10:12 acento castellano en esta escena y la que sigue (regenerado a nivel 5)",
+          "esp": "sin acento",
+          "hasta": 4260
+        },
+        {
+          "sec": "B",
+          "desde": 4460,
+          "que": "1:14:20 eco",
+          "esp": "¿sigue el eco?"
+        },
+        {
+          "sec": "B",
+          "desde": 5865,
+          "que": "1:37:45 hay eco en la pelea",
+          "esp": "¿sigue el eco?",
+          "hasta": 5880
+        }
+      ]
+    },
+    {
+      "slug": "horror",
+      "titulo": "Horror Express (1972) · doblaje es-MX",
+      "nota": "Primera revisión de Foton del 13-nov. Sin cortes. Los tramos con acento castellano se regeneraron a nivel 5; si siguen, van a nivel 4.",
+      "doblada": {
+        "archivo": "horror_doblada.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "horror_original.mp4",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "cortes": [],
+      "puntos": [
+        {
+          "sec": "A",
+          "desde": 321,
+          "que": "5:21-9:00 acento castellano (regenerado)",
+          "esp": "sin acento (tramo largo: saltar con N)",
+          "hasta": 400
+        },
+        {
+          "sec": "B",
+          "desde": 372,
+          "que": "6:12 hay eco",
+          "esp": "¿sigue el eco?"
+        },
+        {
+          "sec": "A",
+          "desde": 2016,
+          "que": "33:36 «bone saw» en inglés",
+          "esp": "en español"
+        },
+        {
+          "sec": "A",
+          "desde": 2073,
+          "que": "34:33-36:37 acento castellano (regenerado)",
+          "esp": "sin acento",
+          "hasta": 2120
+        },
+        {
+          "sec": "A",
+          "desde": 2540,
+          "que": "42:20-48:00 acento castellano (regenerado)",
+          "esp": "sin acento",
+          "hasta": 2600
+        },
+        {
+          "sec": "A",
+          "desde": 3195,
+          "que": "53:15 «Help» en inglés",
+          "esp": "en español"
+        },
+        {
+          "sec": "A",
+          "desde": 3254,
+          "que": "54:14-55:00 acento castellano (regenerado)",
+          "esp": "sin acento",
+          "hasta": 3300
+        },
+        {
+          "sec": "B",
+          "desde": 3387,
+          "que": "56:27 inglés y español juntos",
+          "esp": "¿sigue el inglés debajo?",
+          "hasta": 3400
+        },
+        {
+          "sec": "A",
+          "desde": 3450,
+          "que": "57:30-1:12:50 acento castellano (regenerado)",
+          "esp": "sin acento (tramo largo)",
+          "hasta": 3520
+        },
+        {
+          "sec": "B",
+          "desde": 4877,
+          "que": "1:21:17 inglés y español juntos",
+          "esp": "¿sigue el inglés debajo?",
+          "hasta": 4890
+        },
+        {
+          "sec": "A",
+          "desde": 5027,
+          "que": "1:23:47 acento castellano (regenerado)",
+          "esp": "sin acento",
+          "hasta": 5080
+        }
+      ]
     }
   ]
 }
