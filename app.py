@@ -100,6 +100,7 @@ def index():
     for p in pels:
         p["lista"] = existe_video(p["doblada"]["archivo"]) and existe_video(p["original"]["archivo"])
         p["n_puntos"] = len(p["puntos"])
+        p["n_marcas"] = len(vigente(leer(p["slug"]))) if p.get("modo") == "entera" else 0
     return render_template("index.html", peliculas=pels)
 
 
@@ -119,7 +120,8 @@ def pelicula(slug):
     if not con_clave():
         return redirect(url_for("entrar"))
     p = peliculas().get(slug) or abort(404)
-    return render_template("pelicula.html", p=p, p_json=json.dumps(p, ensure_ascii=False))
+    plantilla = "entera.html" if p.get("modo") == "entera" else "pelicula.html"
+    return render_template(plantilla, p=p, p_json=json.dumps(p, ensure_ascii=False))
 
 
 @app.get("/videos/<path:nombre>")
@@ -159,6 +161,7 @@ def api_guardar(slug):
         tiempo=float(d.get("tiempo") or 0),
         idioma=(d.get("idioma") or "dob")[:3],
         veredicto=(d.get("veredicto") or "")[:10],
+        categoria=(d.get("categoria") or "").strip()[:30],
         nota=(d.get("nota") or "").strip()[:1000],
         borrado=bool(d.get("borrado")),
         cuando=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
@@ -201,11 +204,12 @@ def _md(slug: str) -> str:
     filas = vigente(leer(slug))
     md = f"# {p['titulo']} · correcciones de los correctores\n\n"
     for quien in sorted({f["corrector"] for f in filas}):
-        md += f"## {quien}\n\n| Tiempo | Punto | Resultado | Nota | Cuándo (UTC) |\n|---|---|---|---|---|\n"
+        md += f"## {quien}\n\n| Tiempo | Punto | Resultado | Qué | Nota | Cuándo (UTC) |\n|---|---|---|---|---|---|\n"
         mias = sorted((f for f in filas if f["corrector"] == quien), key=lambda f: f["tiempo"])
         for f in mias:
             que = p["puntos"][f["punto"]]["que"] if f["punto"] is not None else "NUEVO (marcado por el corrector)"
-            md += f"| {fmt_t(f['tiempo'])} | {que} | {f['veredicto']} | {f['nota'].replace('|', '/')} | {f['cuando']} |\n"
+            md += (f"| {fmt_t(f['tiempo'])} | {que} | {f['veredicto']} | {f.get('categoria', '')} | "
+                   f"{f['nota'].replace('|', '/')} | {f['cuando']} |\n")
         md += "\n"
     return md
 

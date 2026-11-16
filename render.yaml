@@ -9,7 +9,7 @@ services:
     disk:
       name: videos
       mountPath: /var/data
-      sizeGB: 30
+      sizeGB: 100
     envVars:
       - key: VIDEOS_DIR
         value: /var/data/videos

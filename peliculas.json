@@ -637,6 +637,306 @@
           "hasta": 5080
         }
       ]
+    },
+    {
+      "slug": "p074_just_before_dawn",
+      "modo": "entera",
+      "titulo": "P074 Just Before Dawn · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado). La entrega anterior estaba compactada y desfasada; esta es la película entera.",
+      "doblada": {
+        "archivo": "p074_just_before_dawn.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p074_just_before_dawn_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p075_kansas_city_confidential",
+      "modo": "entera",
+      "titulo": "P075 Kansas City Confidential · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado). La entrega anterior estaba compactada y desfasada; esta es la película entera.",
+      "doblada": {
+        "archivo": "p075_kansas_city_confidential.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p075_kansas_city_confidential_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p087_the_crawling_eye",
+      "modo": "entera",
+      "titulo": "P087 The Crawling Eye · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p087_the_crawling_eye.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p087_the_crawling_eye_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p098_your_vice_is_a_locked_room",
+      "modo": "entera",
+      "titulo": "P098 Your Vice Is a Locked Room · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p098_your_vice_is_a_locked_room.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p098_your_vice_is_a_locked_room_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p153_a_bucket_of_blood",
+      "modo": "entera",
+      "titulo": "P153 A Bucket of Blood · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado). La entrega anterior estaba compactada y desfasada; esta es la película entera.",
+      "doblada": {
+        "archivo": "p153_a_bucket_of_blood.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p153_a_bucket_of_blood_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p154_big_combo",
+      "modo": "entera",
+      "titulo": "P154 The Big Combo · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p154_big_combo.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p154_big_combo_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p169_blood_and_black_lace",
+      "modo": "entera",
+      "titulo": "P169 Blood and Black Lace · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p169_blood_and_black_lace.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p169_blood_and_black_lace_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p176_city_of_the_dead",
+      "modo": "entera",
+      "titulo": "P176 City of the Dead · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p176_city_of_the_dead.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p176_city_of_the_dead_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p178_dementia",
+      "modo": "entera",
+      "titulo": "P178 Dementia · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p178_dementia.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p178_dementia_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p183_house_on_haunted_hill",
+      "modo": "entera",
+      "titulo": "P183 House on Haunted Hill · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado). La entrega anterior estaba compactada y desfasada; esta es la película entera.",
+      "doblada": {
+        "archivo": "p183_house_on_haunted_hill.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p183_house_on_haunted_hill_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p184_the_last_man_on_earth",
+      "modo": "entera",
+      "titulo": "P184 The Last Man on Earth · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado). La entrega anterior estaba compactada y desfasada; esta es la película entera.",
+      "doblada": {
+        "archivo": "p184_the_last_man_on_earth.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p184_the_last_man_on_earth_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p185_little_shop_of_horros",
+      "modo": "entera",
+      "titulo": "P185 Little Shop of Horrors · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p185_little_shop_of_horros.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p185_little_shop_of_horros_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p197_night_tide",
+      "modo": "entera",
+      "titulo": "P197 Night Tide · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p197_night_tide.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p197_night_tide_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p202_red_house",
+      "modo": "entera",
+      "titulo": "P202 The Red House · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p202_red_house.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p202_red_house_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p205_spider_baby",
+      "modo": "entera",
+      "titulo": "P205 Spider Baby · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p205_spider_baby.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p205_spider_baby_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p206_theater_of_blood",
+      "modo": "entera",
+      "titulo": "P206 Theater of Blood · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p206_theater_of_blood.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p206_theater_of_blood_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p210_things_to_come",
+      "modo": "entera",
+      "titulo": "P210 Things to Come · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p210_things_to_come.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p210_things_to_come_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p212_white_zombie",
+      "modo": "entera",
+      "titulo": "P212 White Zombie · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p212_white_zombie.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p212_white_zombie_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p230_the_sadist",
+      "modo": "entera",
+      "titulo": "P230 The Sadist · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p230_the_sadist.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p230_the_sadist_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
+    },
+    {
+      "slug": "p280_chopping_mall",
+      "modo": "entera",
+      "titulo": "P280 Chopping Mall · doblaje es-MX",
+      "nota": "Remezcla del 16-nov (seseo, velocidad, antieco, final completado).",
+      "doblada": {
+        "archivo": "p280_chopping_mall.mp4",
+        "nombre": "DOBLADA (es-MX)"
+      },
+      "original": {
+        "archivo": "p280_chopping_mall_ori.m4a",
+        "nombre": "ORIGINAL (inglés)"
+      },
+      "puntos": []
     }
   ]
 }

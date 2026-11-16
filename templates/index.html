@@ -14,7 +14,7 @@
   <div class="tarjeta">
     <div>
       <h2>{{ p.titulo }}</h2>
-      <p>{{ p.n_puntos }} puntos marcados · {{ p.nota }}</p>
+      {% if p.modo == 'entera' %}<p>Ver entera · {{ p.n_marcas }} marcas · {{ p.nota }}</p>{% else %}<p>{{ p.n_puntos }} puntos marcados · {{ p.nota }}</p>{% endif %}
       {% if not p.lista %}<p class="falta">Los videos todavía no están cargados en el servidor.</p>{% endif %}
     </div>
     <a class="ir" href="{{ url_for('pelicula', slug=p.slug) }}"><button class="big">▶ Revisar</button></a>

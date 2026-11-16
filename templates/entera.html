@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ p.titulo }} · ver entera</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body class="pelicula entera">
+<header>
+  <a class="volver" href="{{ url_for('index') }}">← Películas</a>
+  <h1>{{ p.titulo }}</h1>
+  <span id="quien" class="k"></span>
+  <span id="prog" class="k"></span>
+  <span class="k ayuda"><span class="kbd">espacio</span> pausa y marcar · <span class="kbd">O</span> original/doblada · <span class="kbd">←</span><span class="kbd">→</span> 5 s · <span class="kbd">Enter</span> guardar y seguir · <span class="kbd">Esc</span> cerrar sin guardar</span>
+</header>
+<main>
+  <div class="marco">
+    <video id="v" controls preload="auto" playsinline></video>
+    <audio id="a" preload="auto"></audio>
+  </div>
+  <div class="barra">
+    <span class="idioma" id="a-idioma"></span>
+    <button class="conm" id="conm">O · Conmutar a ORIGINAL</button>
+    <span id="estado" class="k"></span>
+  </div>
+  <div id="marca" hidden>
+    <div class="fila">
+      <span class="t" id="m-t"></span>
+      <button class="mini" id="m-menos" title="1 s antes">−1 s</button>
+      <button class="mini" id="m-mas" title="1 s después">+1 s</button>
+      <span class="k" id="m-idioma"></span>
+    </div>
+    <div class="fila cats" id="cats"></div>
+    <div class="fila">
+      <input type="text" id="nota" placeholder="nota (opcional): qué se oye y qué debería ser · Enter guarda y sigue">
+      <button class="bad" id="m-guardar">Guardar y seguir</button>
+      <button id="m-cerrar">Esc · cerrar</button>
+    </div>
+  </div>
+</main>
+<aside id="lista"></aside>
+<div id="inicio">
+  <div class="caja">
+    <h2>¿Quién revisa?</h2>
+    <input type="text" id="nombre" placeholder="Tu nombre" autocomplete="name">
+    <button class="big" id="empezar">▶ Empezar</button>
+    <p>{{ p.nota }}</p>
+    <p>La película se ve entera. Con <b>O</b> conmutás entre doblada y original en el mismo instante. Cuando oigas algo mal, <b>pausá</b> (espacio): abajo aparece un cuadro con el tiempo ya puesto; elegí qué pasa, escribí una nota si hace falta y <b>Enter</b> guarda y sigue. Tus marcas quedan a la derecha (clic = volver ahí) y se guardan en el servidor al instante.</p>
+  </div>
+</div>
+<script>const PELICULA = {{ p_json|safe }};</script>
+<script src="{{ url_for('static', filename='entera.js') }}"></script>
+</body>
+</html>
