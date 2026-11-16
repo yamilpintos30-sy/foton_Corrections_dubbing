@@ -101,6 +101,7 @@ def index():
         p["lista"] = existe_video(p["doblada"]["archivo"]) and existe_video(p["original"]["archivo"])
         p["n_puntos"] = len(p["puntos"])
         p["n_marcas"] = len(vigente(leer(p["slug"]))) if p.get("modo") == "entera" else 0
+    pels.sort(key=lambda p: not p["lista"])                # las cargadas primero (orden estable)
     return render_template("index.html", peliculas=pels)
 
 

@@ -17,7 +17,7 @@
       {% if p.modo == 'entera' %}<p>Ver entera · {{ p.n_marcas }} marcas · {{ p.nota }}</p>{% else %}<p>{{ p.n_puntos }} puntos marcados · {{ p.nota }}</p>{% endif %}
       {% if not p.lista %}<p class="falta">Los videos todavía no están cargados en el servidor.</p>{% endif %}
     </div>
-    <a class="ir" href="{{ url_for('pelicula', slug=p.slug) }}"><button class="big">▶ Revisar</button></a>
+    {% if p.lista %}<a class="ir" href="{{ url_for('pelicula', slug=p.slug) }}"><button class="big">▶ Revisar</button></a>{% else %}<span class="ir falta">todavía no está cargada</span>{% endif %}
   </div>
   {% endfor %}
 </div>
